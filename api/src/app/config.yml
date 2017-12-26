@@ -1,0 +1,6 @@
+outtmpl: 'storage/%(title)s.%(ext)s'
+format: bestaudio/best
+postprocessors:
+  - key: FFmpegExtractAudio
+    preferredcodec: mp3
+    preferredquality: '192'

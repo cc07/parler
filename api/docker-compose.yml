@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    image: codekitchen/api:1.0
+    container_name: web
+    volumes:
+      - "./src:/opt/api"
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_APP=/opt/api/run.py
+      - FLASK_DEBUG=1
+      - PYTHONPATH=/opt/api
+    command: flask run --host=0.0.0.0
