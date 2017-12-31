@@ -1,5 +1,35 @@
 {
   "expo": {
-    "sdkVersion": "23.0.0"
+    "name": "Parler",
+    "icon": "./app_icon.png",
+    "version": "1.0.0",
+    "sdkVersion": "23.0.0",
+    "android": {
+      "package": "com.cc.parler"
+    },
+    "ios": {
+      "bundleIdentifier": "com.cc.parler",
+      "publishBundlePath": "ios/parler/Supporting/shell-app.bundle",
+      "publishManifestPath": "ios/parler/Supporting/shell-app-manifest.json"
+    },
+    "slug": "parler",
+    "isDetached": true,
+    "detach": {
+      "scheme": "exp3afb3c212bfe4ab3b821123f6917b4cb",
+      "iosExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/ios-v2.1.4-sdk23.0.0-f67c5bc3-4a27-40f6-8686-91e8f868a145.tar.gz",
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.1.2-sdk23.0.0-d47f172b-1ed3-4c8f-9e48-239052c678b6.tar.gz"
+    }
+  },
+  "hooks": {
+    "postPublish": [
+      {
+        "file": "sentry-expo/upload-sourcemaps",
+        "config": {
+          "organization": "chris-chiang",
+          "project": "parler",
+          "authToken": "7cb50306334947fa99696158c45dfe162d9e82db932c4ba4a0805fa823fe2836"
+        }
+      }
+    ]
   }
 }
