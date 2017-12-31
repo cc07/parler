@@ -12,12 +12,20 @@ export default StyleSheet.create({
   },
   flatListItem: {
     flex: 1,
-    paddingTop: 10,
-    paddingBottom: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingTop: 15,
+    paddingBottom: 15,
     paddingLeft: 20,
     paddingRight: 20,
-    borderBottomColor: '#666',
+    borderBottomColor: '#999',
     borderBottomWidth: 1,
+  },
+  flatListItemText: {
+    flex: 1,
     fontSize: 20,
+  },
+  flatListItemIcon: {
+    flex: 1,
   }
 });
