@@ -14,6 +14,12 @@ import {
 } from './src/scenes';
 import StorybookUI from './storybook';
 
+import { Sentry } from 'react-native-sentry';
+
+const sentryDsn = Platform.select({"ios":"https://5a23933befb849f9986fd516ddd8daa4:5d3272001dbb4c9e8ba295a8cb76e274@sentry.io/265332","android":"https://5a23933befb849f9986fd516ddd8daa4:5d3272001dbb4c9e8ba295a8cb76e274@sentry.io/265332"});
+Sentry.config(sentryDsn).install();
+
+
 const App = StackNavigator(
   {
     Home: {
